@@ -17,7 +17,7 @@ public class ExampleScript : MonoBehaviour
     void Start()
     {
         Debug.Log("Bienvenido al Taller de Unity - Academia 42!");
-        Debug.Log($"Nombre del jugador: {playerName}");
+        Debug.Log($"¡Nombre del jugador: {playerName}!");
     }
     
     // Update is called once per frame
@@ -26,10 +26,11 @@ public class ExampleScript : MonoBehaviour
         // Update timer
         timer += Time.deltaTime;
         
-        // Example: Basic movement using arrow keys or WASD
+        // Example: Basic 2D movement using arrow keys or WASD
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         
+        // For 2D games, use horizontal (X) and vertical (Y) on the 2D plane
         Vector3 movement = new Vector3(horizontal, vertical, 0f);
         transform.position += movement * moveSpeed * Time.deltaTime;
         
